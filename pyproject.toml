@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "atomic-metric"
+version = "0.1.0"
+description = "Measure how atomic functions in a project are."
+authors = ["Jean-Louis Fuchs <jean-louis.fuchs@adfinis.com>"]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.scripts]
+atomic-metric = 'atomic_metric:cli'
+
+[tool.mypy]
+check_untyped_defs = true
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jedi = "^0.19.1"
+parso = "^0.8.3"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+mypy = "^1.8.0"
+pdbpp = "^0.10.3"
+ruff = "^0.3.1"
+python-lsp-server = "^1.10.0"
+python-lsp-ruff = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
